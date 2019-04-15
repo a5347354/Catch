@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/fmMap"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            class="com.google.android.gms.maps.SupportMapFragment" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|left"
+            android:layout_marginRight="170px"
+            android:background="#FFFFFF"
+            android:padding="5dp">
+
+            <EditText
+                android:id="@+id/etLocationName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/btSubmit"
+                android:hint="Key location name" />
+
+            <Button
+                android:id="@+id/btSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:onClick="onLocationNameClick"
+                android:text="Submit" />
+
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/btSentPositon"
+            android:layout_width="350px"
+            android:layout_height="100px"
+            android:layout_gravity="center"
+            android:onClick="onResultClick"
+            android:layout_marginBottom="280px"
+            android:visibility="invisible"
+            android:background="@drawable/sent_location_1"
+            />
+
+        <ImageButton
+            android:id="@+id/btPositon"
+            android:layout_width="150px"
+            android:layout_height="200px"
+            android:layout_gravity="center"
+            android:layout_marginBottom="100px"
+            android:visibility="invisible"
+            android:background="@drawable/location"
+            />
+
+    </FrameLayout>
+
+</LinearLayout>

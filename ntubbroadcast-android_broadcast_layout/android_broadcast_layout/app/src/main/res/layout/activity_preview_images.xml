@@ -1,0 +1,76 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="net.funol.photolocker.activity.PreviewImagesActivity">
+    <!--正在預覽圖片的View-->
+
+
+    <RelativeLayout
+        android:id="@+id/preview_images_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000">
+        <TextView
+            android:id="@+id/preview_images_text"
+            android:text="1/1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            android:textSize="27dp"
+            android:textColor="#ffffff"/>
+
+        <ImageButton
+            android:id="@+id/preview_images_cross"
+            android:layout_width="80px"
+            android:layout_height="80px"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10px"
+            android:layout_marginTop="10px"
+            android:layout_marginRight="20px"
+            android:layout_marginEnd="20px"
+            android:layout_centerVertical="true"
+            android:layout_gravity="right"
+            android:padding="10dp"
+            android:scaleType="centerInside"
+            android:background="@drawable/cross"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/preview_images_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#000000">
+
+
+        <ImageButton
+            android:id="@+id/preview_images_store"
+            android:layout_width="80px"
+            android:layout_height="80px"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10px"
+            android:layout_marginTop="10px"
+            android:layout_marginRight="20px"
+            android:layout_marginEnd="20px"
+            android:layout_centerVertical="true"
+            android:layout_gravity="right"
+            android:padding="10dp"
+            android:scaleType="centerInside"
+            android:background="@drawable/download"/>
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/preview_images_pager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/preview_images_bottom"
+        android:layout_below="@+id/preview_images_top"
+        android:background="#000000">
+    </android.support.v4.view.ViewPager>
+
+
+</RelativeLayout>

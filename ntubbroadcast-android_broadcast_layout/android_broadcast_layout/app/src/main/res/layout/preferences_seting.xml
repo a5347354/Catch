@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="廣告" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:paddingLeft="10dp"
+            android:text="食" />
+        <Switch
+            android:id="@+id/food_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:textOn="接收"
+            android:textOff="不接收"/>
+    </LinearLayout>
+    <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="20dp"
+        android:paddingLeft="10dp"
+        android:text="衣" />
+        <Switch
+            android:id="@+id/clothes_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:textOn="接收"
+            android:textOff="不接收" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:paddingLeft="10dp"
+            android:text="娛樂" />
+        <Switch
+            android:id="@+id/entertainment_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:textOn="接收"
+            android:textOff="不接收" />
+    </LinearLayout>
+
+</LinearLayout>

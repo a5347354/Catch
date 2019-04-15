@@ -1,0 +1,159 @@
+<!--最外層的Layout，無背景-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context=".MeetingActivity">
+
+    <!--第一條背景-->
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_weight="0"
+        android:background="#FFC600"
+
+        >
+
+        <com.andexert.library.RippleView
+            android:layout_width="?android:actionBarSize"
+            android:layout_height="?android:actionBarSize"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            ripple:rv_centered="true"
+            ripple:rv_type="doubleRipple"
+            ripple:rv_zoom="true">
+            <!--返回按鈕(特效)-->
+            <ImageButton
+                android:id="@+id/backBtn"
+                android:layout_width="?android:actionBarSize"
+                android:layout_height="?android:actionBarSize"
+                android:layout_gravity="center"
+                android:background="#00000000"
+                android:padding="10dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/meeting_back" />
+        </com.andexert.library.RippleView>
+
+        <TextView
+            android:id="@+id/chatTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="5px"
+            android:text="Title"
+            android:textColor="#FFF"
+            android:textSize="30dp" />
+        <!--更多設定
+        <ImageButton
+            android:id="@+id/meeting_more"
+            android:layout_width="?android:actionBarSize"
+            android:layout_height="?android:actionBarSize"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:background="#00000000"
+            android:padding="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/meeting_more" />-->
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/statusTitle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="vertical"
+        android:padding="0dp"
+        android:background="#CCAE99"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="none connected"
+            android:id="@+id/stateBar"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+
+    <!--第二條背景-->
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/home_background_3"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/messagesContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/messageEdit"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:divider="@null"
+            android:listSelector="@android:color/transparent"
+            android:transcriptMode="alwaysScroll" />
+    </RelativeLayout>
+
+    <!--第三條背景-->
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/meeting_botton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFC600">
+        <!--更多傳送選項-->
+        <ImageButton
+            android:id="@+id/meeting_add"
+            android:layout_width="?android:actionBarSize"
+            android:layout_height="?android:actionBarSize"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:background="#00000000"
+            android:padding="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/meeting_add" />
+
+        <!--傳送訊息框-->
+        <EditText
+            android:id="@+id/meeting_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/meeting_send"
+            android:layout_toRightOf="@+id/meeting_add"
+            android:background="@drawable/bg_edittext"
+            android:gravity="center_vertical"
+            android:hint="Message"
+            android:maxLines="6"
+            android:paddingBottom="7dp"
+            android:paddingLeft="14dp"
+            android:paddingTop="7dp"
+            android:textColor="#FFFFFF"
+            android:textSize="60px" />
+
+        <!--傳送按鈕-->
+        <ImageButton
+            android:id="@+id/meeting_send"
+            android:layout_width="?android:actionBarSize"
+            android:layout_height="?android:actionBarSize"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:background="#00000000"
+            android:padding="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/meeting_send" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

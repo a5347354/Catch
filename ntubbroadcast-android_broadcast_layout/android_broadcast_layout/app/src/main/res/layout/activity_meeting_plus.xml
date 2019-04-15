@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#00000000"
+    >
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="0dp"
+        android:layout_marginLeft="0dp"
+        android:background="#00000000"
+        >
+
+        <ImageButton
+            android:layout_width="?android:actionBarSize"
+            android:layout_height="?android:actionBarSize"
+            android:id="@+id/add_location"
+            android:background="#00000000"
+            android:src="@drawable/meeting_add_location"
+            android:scaleType="fitXY" />
+
+        <ImageButton
+            android:layout_width="?android:actionBarSize"
+            android:layout_height="?android:actionBarSize"
+            android:id="@+id/add_photo"
+            android:background="#00000000"
+            android:src="@drawable/meeting_add_photo"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:scaleType="fitXY" />
+
+        <ImageButton
+            android:layout_width="?android:actionBarSize"
+            android:layout_height="?android:actionBarSize"
+            android:id="@+id/add_voice"
+            android:background="#00000000"
+            android:src="@drawable/meeting_add_voice"
+
+            android:scaleType="fitXY" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
